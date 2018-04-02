@@ -8,7 +8,7 @@ b = int(input("Enter your denominator: "))
 def divide(a, b):
     try:
         return a/b
-    except:
+    except ZeroDivisionError:
         return "Division by zero is meaningless"
 
 # print result of the function call
