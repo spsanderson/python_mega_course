@@ -17,7 +17,7 @@ We can use the website [http://strftime.org/](http://strftime.org/) for help wit
 
 [Section 5 - Build Interactive Dictionary](https://github.com/spsanderson/python_mega_course/tree/master/Section5%20-%20Build%20Interactive%20Dictionary)
 
-[Section 6 - Pandas]([https://github.com/spsanderson/python_mega_course/tree/master/Section6%20-%20Pandas)
+[Section 6 - Pandas](https://github.com/spsanderson/python_mega_course/tree/master/Section6%20-%20Pandas)
 
-[Section 7 - Numpy]([https://github.com/spsanderson/python_mega_course/tree/master/Section7%20-%20Numpy)
+[Section 7 - Numpy](https://github.com/spsanderson/python_mega_course/tree/master/Section7%20-%20Numpy)
 
