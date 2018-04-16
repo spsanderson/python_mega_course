@@ -15,7 +15,7 @@
     <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
     <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
     
-            <style> #map_91b0d0f4a5a94813a0b0e123d92d73f6 {
+            <style> #map_b0d96dc225a142519791fc3130def5a8 {
                 position : relative;
                 width : 100.0%;
                 height: 100.0%;
@@ -27,7 +27,7 @@
 </head>
 <body>    
     
-            <div class="folium-map" id="map_91b0d0f4a5a94813a0b0e123d92d73f6" ></div>
+            <div class="folium-map" id="map_b0d96dc225a142519791fc3130def5a8" ></div>
         
 </body>
 <script>    
@@ -37,9 +37,9 @@
                 var bounds = null;
             
 
-            var map_91b0d0f4a5a94813a0b0e123d92d73f6 = L.map(
-                                  'map_91b0d0f4a5a94813a0b0e123d92d73f6',
-                                  {center: [40.766483,-73.0207118],
+            var map_b0d96dc225a142519791fc3130def5a8 = L.map(
+                                  'map_b0d96dc225a142519791fc3130def5a8',
+                                  {center: [40.7619066,-73.037737],
                                   zoom: 10,
                                   maxBounds: bounds,
                                   layers: [],
@@ -49,7 +49,7 @@
             
         
     
-            var tile_layer_ad9e5cfb79554aaba39bd1e493514abc = L.tileLayer(
+            var tile_layer_b9758822ed67457e88f57ec4a9e75a98 = L.tileLayer(
                 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
                 {
   "attribution": null,
@@ -59,27 +59,71 @@
   "noWrap": false,
   "subdomains": "abc"
 }
-                ).addTo(map_91b0d0f4a5a94813a0b0e123d92d73f6);
+                ).addTo(map_b0d96dc225a142519791fc3130def5a8);
         
     
 
-            var marker_640b45b7e1674daa8fd3b2a31f044207 = L.marker(
+            var marker_075b051ef916434ba54ebdad9293910e = L.marker(
+                [[40.766483, -73.0207118],[40.770015, -73.02714]],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_b0d96dc225a142519791fc3130def5a8);
+            
+    
+
+                var icon_e51ce5c014d04975961a55ed6bd008bf = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_075b051ef916434ba54ebdad9293910e.setIcon(icon_e51ce5c014d04975961a55ed6bd008bf);
+            
+    
+            var popup_6c39f774029c4f13928066677fe1de52 = L.popup({maxWidth: '300'});
+
+            
+                var html_e68ce996215449978d4468d93570cc9b = $('<div id="html_e68ce996215449978d4468d93570cc9b" style="width: 100.0%; height: 100.0%;">Office</div>')[0];
+                popup_6c39f774029c4f13928066677fe1de52.setContent(html_e68ce996215449978d4468d93570cc9b);
+            
+
+            marker_075b051ef916434ba54ebdad9293910e.bindPopup(popup_6c39f774029c4f13928066677fe1de52);
+
+            
+        
+    
+
+            var marker_9f5f34348f1f4710b0f864fd74044ff6 = L.marker(
                 [40.766483,-73.0207118],
                 {
                     icon: new L.Icon.Default()
                     }
                 )
-                .addTo(map_91b0d0f4a5a94813a0b0e123d92d73f6);
+                .addTo(map_b0d96dc225a142519791fc3130def5a8);
             
     
-            var popup_2b2fa6abebbb40c3952db695d09b027d = L.popup({maxWidth: '300'});
+
+                var icon_348d8393cc29481ebc1987857098c321 = L.AwesomeMarkers.icon({
+                    icon: 'info-sign',
+                    iconColor: 'white',
+                    markerColor: 'blue',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_9f5f34348f1f4710b0f864fd74044ff6.setIcon(icon_348d8393cc29481ebc1987857098c321);
+            
+    
+            var popup_7a59e24e443e4bfaa84121381ce1f242 = L.popup({maxWidth: '300'});
 
             
-                var html_b389753e1b8a43ddad36a59f9ae18e02 = $('<div id="html_b389753e1b8a43ddad36a59f9ae18e02" style="width: 100.0%; height: 100.0%;">My Office</div>')[0];
-                popup_2b2fa6abebbb40c3952db695d09b027d.setContent(html_b389753e1b8a43ddad36a59f9ae18e02);
+                var html_4fa37eb218e2415e983c91aa92a334aa = $('<div id="html_4fa37eb218e2415e983c91aa92a334aa" style="width: 100.0%; height: 100.0%;">Hi I'm an icon</div>')[0];
+                popup_7a59e24e443e4bfaa84121381ce1f242.setContent(html_4fa37eb218e2415e983c91aa92a334aa);
             
 
-            marker_640b45b7e1674daa8fd3b2a31f044207.bindPopup(popup_2b2fa6abebbb40c3952db695d09b027d);
+            marker_9f5f34348f1f4710b0f864fd74044ff6.bindPopup(popup_7a59e24e443e4bfaa84121381ce1f242);
 
             
         

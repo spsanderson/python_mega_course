@@ -15,7 +15,7 @@
     <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
     <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
     
-            <style> #map_91b0d0f4a5a94813a0b0e123d92d73f6 {
+            <style> #map_6df46bc92ca94a51b222e3fda5eca1d7 {
                 position : relative;
                 width : 100.0%;
                 height: 100.0%;
@@ -27,7 +27,7 @@
 </head>
 <body>    
     
-            <div class="folium-map" id="map_91b0d0f4a5a94813a0b0e123d92d73f6" ></div>
+            <div class="folium-map" id="map_6df46bc92ca94a51b222e3fda5eca1d7" ></div>
         
 </body>
 <script>    
@@ -37,9 +37,9 @@
                 var bounds = null;
             
 
-            var map_91b0d0f4a5a94813a0b0e123d92d73f6 = L.map(
-                                  'map_91b0d0f4a5a94813a0b0e123d92d73f6',
-                                  {center: [40.766483,-73.0207118],
+            var map_6df46bc92ca94a51b222e3fda5eca1d7 = L.map(
+                                  'map_6df46bc92ca94a51b222e3fda5eca1d7',
+                                  {center: [40.7619066,-73.037737],
                                   zoom: 10,
                                   maxBounds: bounds,
                                   layers: [],
@@ -49,7 +49,7 @@
             
         
     
-            var tile_layer_ad9e5cfb79554aaba39bd1e493514abc = L.tileLayer(
+            var tile_layer_3e8a5d3443274eabaebca2d82430b409 = L.tileLayer(
                 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
                 {
   "attribution": null,
@@ -59,6 +59,54 @@
   "noWrap": false,
   "subdomains": "abc"
 }
-                ).addTo(map_91b0d0f4a5a94813a0b0e123d92d73f6);
+                ).addTo(map_6df46bc92ca94a51b222e3fda5eca1d7);
+        
+    
+            var feature_group_2530eba028f44390aca888705ab15750 = L.featureGroup(
+                ).addTo(map_6df46bc92ca94a51b222e3fda5eca1d7);
+        
+    
+
+            var marker_e6c11ba15f0542dd84fc7e6d28bb0a73 = L.marker(
+                [40.766483,-73.0207118],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_2530eba028f44390aca888705ab15750);
+            
+    
+            var popup_6bcab735786f448b8eb0acea2a0de87d = L.popup({maxWidth: '300'});
+
+            
+                var html_54e6a850b8944ba3a0c41c7a012d3842 = $('<div id="html_54e6a850b8944ba3a0c41c7a012d3842" style="width: 100.0%; height: 100.0%;">Office</div>')[0];
+                popup_6bcab735786f448b8eb0acea2a0de87d.setContent(html_54e6a850b8944ba3a0c41c7a012d3842);
+            
+
+            marker_e6c11ba15f0542dd84fc7e6d28bb0a73.bindPopup(popup_6bcab735786f448b8eb0acea2a0de87d);
+
+            
+        
+    
+
+            var marker_13be691fc0774e9682c85ed64d66b496 = L.marker(
+                [40.770015,-73.02714],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(feature_group_2530eba028f44390aca888705ab15750);
+            
+    
+            var popup_d8c54122a493440c99f8f07a20038c11 = L.popup({maxWidth: '300'});
+
+            
+                var html_c88d09a51ae448a593d7596ed86f1ed7 = $('<div id="html_c88d09a51ae448a593d7596ed86f1ed7" style="width: 100.0%; height: 100.0%;">Home</div>')[0];
+                popup_d8c54122a493440c99f8f07a20038c11.setContent(html_c88d09a51ae448a593d7596ed86f1ed7);
+            
+
+            marker_13be691fc0774e9682c85ed64d66b496.bindPopup(popup_d8c54122a493440c99f8f07a20038c11);
+
+            
         
 </script>
