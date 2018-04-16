@@ -5,13 +5,10 @@ map = folium.Map(location=[40.7619066,-73.037737], zoom_start=10, tiles="OpenStr
 
 # Create a feature group to make code more readable
 fg = folium.FeatureGroup(name="My Map")
+# add features
 fg.add_child(folium.Marker(location=office_loc, popup="Office"))
 fg.add_child(folium.Marker(location=home_loc, popup="Home"))
+# add features to the map
 map.add_child(fg)
+#save the map
 map.save("Map1.html")
-
-#map.add_child(folium.Marker(location=office_loc, popup="Hi I'm an icon", icon=folium.Icon(color='blue')))
-#folium.Marker(home_loc,office_loc,popup="My Office").add_to(map)
-#folium.Marker(home_loc,popup="Home").add_to(map)
-
-#map.save("Map2.html")
