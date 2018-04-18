@@ -26,14 +26,16 @@ fg = folium.FeatureGroup(name="My Map of Volcanoes in USA")
 # loop through lat and lon, use zip()
 for lt, ln, el, nm in zip(lat, lon, elev, volname):
     fg.add_child(
-        folium.Marker(
+        folium.CircleMarker(
             location=([lt, ln])
             , popup = folium.Popup(
                 "Elevation: " + str(el) + "m - Name: " + str(nm), parse_html=True
             )
-            , icon = folium.Icon(
-                color = color_producer(el)
-            )
+            , color = color_producer(el)
+            , radius = 6
+            , fill = True
+            , fill_color = color_producer(el)
+            , fill_opacity = 0.618
         )
     )
     map.add_child(fg)
