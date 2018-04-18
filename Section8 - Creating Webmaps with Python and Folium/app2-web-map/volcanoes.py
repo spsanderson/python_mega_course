@@ -38,7 +38,8 @@ for lt, ln, el, nm in zip(lat, lon, elev, volname):
             , fill_opacity = 0.618
         )
     )
-    map.add_child(fg)
+
+map.add_child(fg)
 map.save("USA_Volcanoes.html")
 # save map as html file
 """
