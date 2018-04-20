@@ -23,6 +23,10 @@ def color_producer(elevation):
 map = folium.Map(location=[38.58, -99.09], zoom_start=5)
 # create feature group
 fg = folium.FeatureGroup(name="My Map of Volcanoes in USA")
+
+# lets add a layer to the map it will be a geojson file
+fg.add_child(folium.GeoJson(data = (open('world.json','r', encoding='utf-8-sig').read())))
+
 # loop through lat and lon, use zip()
 for lt, ln, el, nm in zip(lat, lon, elev, volname):
     fg.add_child(
