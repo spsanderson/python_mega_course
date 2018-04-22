@@ -6,7 +6,7 @@ import math as math
 
 # import data from csv file
 data = pd.read_csv('test_loc.csv')
-data = data[1:300]
+data = data[1:400]
 
 # set a nominatum helper
 nom = geo.Nominatim(timeout=100)
