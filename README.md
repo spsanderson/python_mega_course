@@ -22,3 +22,5 @@ We can use the website [http://strftime.org/](http://strftime.org/) for help wit
 [Section 7 - Numpy](https://github.com/spsanderson/python_mega_course/tree/master/Section7%20-%20Numpy)
 
 [Section 8 - Creating Webmaps with Folium and Python](https://github.com/spsanderson/python_mega_course/tree/master/Section8%20-%20Creating%20Webmaps%20with%20Python%20and%20Folium/app2-web-map)
+
+[Section 9 - Demonstration of Website blocking App](https://github.com/spsanderson/python_mega_course/tree/master/Section9%20-%20Demonstration%20of%20Website%20Blocker%20App)
