@@ -26,3 +26,7 @@ We can use the website [http://strftime.org/](http://strftime.org/) for help wit
 [Section 9 - Demonstration of Website blocking App](https://github.com/spsanderson/python_mega_course/tree/master/Section9%20-%20Demonstration%20of%20Website%20Blocker%20App)
 
 [Section 10 - Building a Website with Python and Flask](https://github.com/spsanderson/python_mega_course/tree/master/Section10%20-%20Building%20a%20Website%20with%20Python%20and%20Flask)
+
+[Section 11 - Building Graphical User Interfaces with Tkinter](https://github.com/spsanderson/python_mega_course/tree/master/Section11%20-%20Introduction%20to%20Tkinter)
+
+[Section 12 - Python for Interacting with SQLite and PostgreSQL Datbases](https://github.com/spsanderson/python_mega_course/tree/master/Section12%20-%20Python%20for%20SQLite%20and%20PostgreSQL%20Databases)
