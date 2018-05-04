@@ -1,12 +1,21 @@
 import tkinter as teek
 
+# Make our window
 window = teek.Tk()
 
+# Our conversion function
 def convert():
-    a = "Hello World"
+    #a = "Hello World"
     #print("Hello World")
-    grams.insert(teek.END, a)
-    pounds.insert(teek.END, a)
+    # Get grams_value
+    grams = float(e1_value.get()) * 1000
+    grams_value.insert(teek.END, grams)
+    # Get pounds_value
+    pounds = float(e1_value.get()) * 2.20462262
+    pounds_value.insert(teek.END, pounds)
+    # Get ounces_value
+    ounces = float(e1_value.get()) * 35.2739619
+    ounces_value.insert(teek.END, ounces)
 
 # Button
 b1 = teek.Button(window, text = "Convert", command = convert)
@@ -29,8 +38,8 @@ gramsText.set("Grams:")
 gramsDir = teek.Label(window, textvariable = gramsText, height = 4)
 gramsDir.grid(row = 1, column = 0)
     # Grams text box where answer will be linked to
-grams = teek.Text(window, height = 1, width = 20)
-grams.grid(row = 1, column = 1)
+grams_value = teek.Text(window, height = 1, width = 20)
+grams_value.grid(row = 1, column = 1)
 
     # Pounds Label
 poundsText = teek.StringVar()
@@ -38,8 +47,8 @@ poundsText.set("Pounds/lbs:")
 poundsDir = teek.Label(window, textvariable = poundsText, height = 4)
 poundsDir.grid(row = 2, column = 0)
     # Pounds text box where answer will be linked to
-pounds = teek.Text(window, height = 1, width = 20)
-pounds.grid(row = 2, column = 1)
+pounds_value = teek.Text(window, height = 1, width = 20)
+pounds_value.grid(row = 2, column = 1)
 
     # Ounces Label
 ouncesText = teek.StringVar()
@@ -47,7 +56,8 @@ ouncesText.set("Ounces:")
 ouncesDir = teek.Label(window, textvariable = ouncesText, height = 4)
 ouncesDir.grid(row = 3, column = 0)
     # Ounces text box where answer will be linked to
-ounces = teek.Text(window, height = 1, width = 20)
-ounces.grid(row = 3, column = 1)
+ounces_value = teek.Text(window, height = 1, width = 20)
+ounces_value.grid(row = 3, column = 1)
 
+# Main window loop
 window.mainloop()
