@@ -8,18 +8,22 @@ def convert():
     #a = "Hello World"
     #print("Hello World")
     # Get grams_value
+    grams_value.delete('1.0', teek.END)
     grams = float(e1_value.get()) * 1000
     grams_value.insert(teek.END, grams)
     # Get pounds_value
+    pounds_value.delete('1.0', teek.END)
     pounds = float(e1_value.get()) * 2.20462262
     pounds_value.insert(teek.END, pounds)
     # Get ounces_value
+    ounces_value.delete('1.0', teek.END)
     ounces = float(e1_value.get()) * 35.2739619
     ounces_value.insert(teek.END, ounces)
 
 # Button
 b1 = teek.Button(window, text = "Convert", command = convert)
 b1.grid(row = 0, column = 2)
+
 
 # Enter values
 entryText = teek.StringVar()
