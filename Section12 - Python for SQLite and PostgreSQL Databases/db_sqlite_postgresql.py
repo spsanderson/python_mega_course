@@ -12,6 +12,8 @@ def create_table():
     # close connection to db
     conn.close()
 
+create_table()
+
 def insert(item, quantity, price):
     conn = sqlite3.connect("lite.db")
     cur = conn.cursor()
