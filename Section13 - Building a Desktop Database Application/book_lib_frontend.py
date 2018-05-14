@@ -70,6 +70,8 @@ def close_command():
 # Main window
 window = Tk()
 
+window.wm_title = "BookStore"
+
 # Labels / Entry Box's
 lbl_Title = Label(window, text = "Title:")
 lbl_Title.grid(row = 0, column = 0)
