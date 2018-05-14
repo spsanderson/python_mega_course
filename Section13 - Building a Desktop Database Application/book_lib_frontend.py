@@ -16,7 +16,56 @@ The user can perform the following:
 """
 
 from tkinter import *
-import book_lib_backend
+import book_lib_backend as backend
+
+# This function allows us to get the index of the selected row
+# in order to pass it to the database
+def get_selected_row(event):
+    global selected_tuple
+    index = lbox_Results.curselection()[0]
+    selected_tuple = lbox_Results.get(index)
+    e_Title.delete(0, END)
+    e_Title.insert(END, selected_tuple[1])
+    e_Author.delete(0, END)
+    e_Author.insert(END, selected_tuple[2])
+    e_Year.delete(0, END)
+    e_Year.insert(END, selected_tuple[3])
+    e_ISBN.delete(0, END)
+    e_ISBN.insert(END, selected_tuple[4])
+    return(selected_tuple)
+
+def view_command():
+    lbox_Results.delete(0,END)
+    for row in backend.view():
+        lbox_Results.insert(END, row)
+
+def search_command():
+    lbox_Results.delete(0, END)
+    for row in backend.search(e_Title.get(), e_Author.get(), e_Year.get(), e_ISBN.get()):
+        lbox_Results.insert(END, row)
+
+def add_command():
+    lbox_Results.delete(0, END)
+    backend.insert(e_Title.get(), e_Author.get(), e_Year.get(), e_ISBN.get())
+    lbox_Results.insert(END, (e_Title.get(), e_Author.get(), e_Year.get(), e_ISBN.get()))
+
+def delete_command():
+    backend.delete(selected_tuple[0])
+    view_command()
+
+def update_commmand():
+    lbox_Results.delete(0, END)
+    backend.update(
+        selected_tuple[0]
+        , e_Title.get()
+        , e_Author.get()
+        , e_Year.get()
+        , e_ISBN.get()
+    )
+    view_command()
+
+def close_command():
+    print("Hi")
 
 # Main window
 window = Tk()
@@ -62,29 +111,31 @@ sb_Results.grid(row = 2, column = 2, rowspan = 6)
 lbox_Results.configure(yscrollcommand = sb_Results.set)
 sb_Results.configure(command = lbox_Results.yview)
 
-# Buttons
+lbox_Results.bind('<<ListboxSelect>>', get_selected_row)
+
+# Buttons #####################################################################
 # View All
-b_ViewAll = Button(window, text = "View All", width = 12)
+b_ViewAll = Button(window, text = "View All", width = 12, command = view_command)
 b_ViewAll.grid(row = 2, column = 3)
 
 # Search Entry
-b_Search = Button(window, text = "Search Entry", width = 12)
+b_Search = Button(window, text = "Search Entry", width = 12, command = search_command)
 b_Search.grid(row = 3, column = 3)
 
 # Add Entry
-b_Add = Button(window, text = "Add Entry", width = 12)
+b_Add = Button(window, text = "Add Entry", width = 12, command = add_command)
 b_Add.grid(row = 4, column = 3)
 
 # Update Entry
-b_Update = Button(window, text = "Update Selected", width = 12)
+b_Update = Button(window, text = "Update Selected", width = 12, command = update_commmand)
 b_Update.grid(row = 5, column = 3)
 
 # Delete Entry
-b_Delete = Button(window, text = "Delete Selected", width = 12)
+b_Delete = Button(window, text = "Delete Selected", width = 12, command = delete_command)
 b_Delete.grid(row = 6, column = 3)
 
 # Close application
-b_Close = Button(window, text = "Close", width = 12)
+b_Close = Button(window, text = "Close", width = 12, command = close_command)
 b_Close.grid(row = 7, column = 3)
 
 window.mainloop()

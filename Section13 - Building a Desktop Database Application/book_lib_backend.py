@@ -1,5 +1,7 @@
 """
-The backend script for the book library frontend
+The backend script for the book library frontend.
+
+connect(), insert(), delete(), search(), update(), view()
 
 """
 
@@ -29,7 +31,7 @@ def insert(title, author, year, isbn):
     cur.execute("INSERT INTO book VALUES (NULL, ?,?,?,?)", (title, author, year, isbn))
     conn.commit()
     conn.close()
-
+# View data
 def view():
     conn = sqlite3.connect("books.db")
     cur = conn.cursor()
@@ -38,16 +40,33 @@ def view():
     rows = cur.fetchall()
     conn.close()
     return rows
-
+# Search data
 def search(title="", author="", year="", isbn=""):
     conn = sqlite3.connect("books.db")
     cur = conn.cursor()
     cur.execute("SELECT * FROM book WHERE title=? or author=? or year=? or isbn=?", (title, author, year, isbn))
-    #conn.commit()
+    conn.commit()
     rows = cur.fetchall()
+    conn.close()
     return rows
+# Delete record
+def delete(id):
+    conn = sqlite3.connect("books.db")
+    cur = conn.cursor()
+    cur.execute("DELETE FROM book WHERE id=?", (id,))
+    conn.commit()
+    conn.close()
+# Update record
+def update(id, title, author, year, isbn):
+    conn = sqlite3.connect("books.db")
+    cur = conn.cursor()
+    cur.execute("UPDATE book SET title=?, author=?, year=?, isbn=? WHERE id=?",(title, author, year, isbn, id))
+    conn.commit()
+    conn.close()
 
 connect()
-insert("Test 1", "Book Worm", 1918, 1234567890)
-print(view())
-print(search(author="Book Worm"))
+#insert("Test 1", "Book Worm", 1918, 1234567890)
+#print(view())
+#delete(2)
+#update(3, "Title 2", "Book Worm 2",1919,9876543210)
+#print(search(author="Book Worm 2"))
