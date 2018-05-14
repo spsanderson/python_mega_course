@@ -44,4 +44,45 @@ e_ISBN = StringVar()
 e_ISBN = Entry(window, textvariable = e_ISBN)
 e_ISBN.grid(row = 1, column = 3)
 
+# List box for returned results
+lbox_Results = Listbox(window, height = 6, width = 35)
+lbox_Results.grid(row = 2
+    , column = 0
+    , rowspan = 6
+    , columnspan = 2
+)
+
+# Scrollbar
+sb_Results = Scrollbar(window)
+sb_Results.grid(row = 2, column = 2, rowspan = 6)
+
+# Configure scroll bar to list_box_results
+lbox_Results.configure(yscrollcommand = sb_Results.set)
+sb_Results.configure(command = lbox_Results.yview)
+
+# Buttons
+# View All
+b_ViewAll = Button(window, text = "View All", width = 12)
+b_ViewAll.grid(row = 2, column = 3)
+
+# Search Entry
+b_Search = Button(window, text = "Search Entry", width = 12)
+b_Search.grid(row = 3, column = 3)
+
+# Add Entry
+b_Add = Button(window, text = "Add Entry", width = 12)
+b_Add.grid(row = 4, column = 3)
+
+# Update Entry
+b_Update = Button(window, text = "Update Selected", width = 12)
+b_Update.grid(row = 5, column = 3)
+
+# Delete Entry
+b_Delete = Button(window, text = "Delete Selected", width = 12)
+b_Delete.grid(row = 6, column = 3)
+
+# Close application
+b_Close = Button(window, text = "Close", width = 12)
+b_Close.grid(row = 7, column = 3)
+
 window.mainloop()
