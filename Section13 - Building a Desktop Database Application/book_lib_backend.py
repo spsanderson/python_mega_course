@@ -64,3 +64,4 @@ def update(id, title, author, year, isbn):
     conn.commit()
     conn.close()
 
+connect()

@@ -1,0 +1,23 @@
+missing module named resource - imported by posix, C:\Users\steve_laptop\Downloads\python_mega_course\Section13 - Building a Desktop Database Application\book_lib_frontend.py
+missing module named posix - imported by os, C:\Users\steve_laptop\Downloads\python_mega_course\Section13 - Building a Desktop Database Application\book_lib_frontend.py
+missing module named _posixsubprocess - imported by subprocess, C:\Users\steve_laptop\Downloads\python_mega_course\Section13 - Building a Desktop Database Application\book_lib_frontend.py
+missing module named 'org.python' - imported by pickle, C:\Users\steve_laptop\Downloads\python_mega_course\Section13 - Building a Desktop Database Application\book_lib_frontend.py, xml.sax
+missing module named clr - imported by pyreadline.clipboard.ironpython_clipboard, pyreadline.console.ironpython_console, C:\Users\steve_laptop\Downloads\python_mega_course\Section13 - Building a Desktop Database Application\book_lib_frontend.py
+missing module named IronPythonConsole - imported by pyreadline.console.ironpython_console, C:\Users\steve_laptop\Downloads\python_mega_course\Section13 - Building a Desktop Database Application\book_lib_frontend.py
+missing module named StringIO - imported by pyreadline.py3k_compat, C:\Users\steve_laptop\Downloads\python_mega_course\Section13 - Building a Desktop Database Application\book_lib_frontend.py
+missing module named System - imported by pyreadline.clipboard.ironpython_clipboard, pyreadline.keysyms.ironpython_keysyms, pyreadline.console.ironpython_console, pyreadline.rlmain, C:\Users\steve_laptop\Downloads\python_mega_course\Section13 - Building a Desktop Database Application\book_lib_frontend.py
+missing module named sets - imported by pyreadline.keysyms.common, C:\Users\steve_laptop\Downloads\python_mega_course\Section13 - Building a Desktop Database Application\book_lib_frontend.py
+missing module named startup - imported by pyreadline.keysyms.common, pyreadline.keysyms.keysyms, C:\Users\steve_laptop\Downloads\python_mega_course\Section13 - Building a Desktop Database Application\book_lib_frontend.py
+missing module named console - imported by pyreadline.console.ansi, C:\Users\steve_laptop\Downloads\python_mega_course\Section13 - Building a Desktop Database Application\book_lib_frontend.py
+excluded module named _frozen_importlib - imported by importlib, importlib.abc, C:\Users\steve_laptop\Downloads\python_mega_course\Section13 - Building a Desktop Database Application\book_lib_frontend.py
+missing module named _frozen_importlib_external - imported by importlib._bootstrap, importlib, importlib.abc, C:\Users\steve_laptop\Downloads\python_mega_course\Section13 - Building a Desktop Database Application\book_lib_frontend.py
+missing module named _winreg - imported by platform, C:\Users\steve_laptop\Downloads\python_mega_course\Section13 - Building a Desktop Database Application\book_lib_frontend.py
+missing module named _scproxy - imported by urllib.request
+missing module named java - imported by platform, C:\Users\steve_laptop\Downloads\python_mega_course\Section13 - Building a Desktop Database Application\book_lib_frontend.py
+missing module named 'java.lang' - imported by platform, C:\Users\steve_laptop\Downloads\python_mega_course\Section13 - Building a Desktop Database Application\book_lib_frontend.py, xml.sax._exceptions
+missing module named vms_lib - imported by platform, C:\Users\steve_laptop\Downloads\python_mega_course\Section13 - Building a Desktop Database Application\book_lib_frontend.py
+missing module named termios - imported by tty, C:\Users\steve_laptop\Downloads\python_mega_course\Section13 - Building a Desktop Database Application\book_lib_frontend.py, getpass
+missing module named grp - imported by shutil, tarfile, C:\Users\steve_laptop\Downloads\python_mega_course\Section13 - Building a Desktop Database Application\book_lib_frontend.py
+missing module named org - imported by copy, C:\Users\steve_laptop\Downloads\python_mega_course\Section13 - Building a Desktop Database Application\book_lib_frontend.py
+missing module named pwd - imported by posixpath, shutil, tarfile, http.server, webbrowser, C:\Users\steve_laptop\Downloads\python_mega_course\Section13 - Building a Desktop Database Application\book_lib_frontend.py, netrc, getpass
+missing module named _dummy_threading - imported by dummy_threading, C:\Users\steve_laptop\Downloads\python_mega_course\Section13 - Building a Desktop Database Application\book_lib_frontend.py

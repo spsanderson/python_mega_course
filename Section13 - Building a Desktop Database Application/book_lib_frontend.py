@@ -16,7 +16,7 @@ The user can perform the following:
 """
 
 from tkinter import *
-import book_lib_backend as backend
+import book_lib_backend
 
 # This function allows us to get the index of the selected row
 # in order to pass it to the database
@@ -39,26 +39,26 @@ def get_selected_row(event):
 
 def view_command():
     lbox_Results.delete(0,END)
-    for row in backend.view():
+    for row in book_lib_backend.view():
         lbox_Results.insert(END, row)
 
 def search_command():
     lbox_Results.delete(0, END)
-    for row in backend.search(e_Title.get(), e_Author.get(), e_Year.get(), e_ISBN.get()):
+    for row in book_lib_backend.search(e_Title.get(), e_Author.get(), e_Year.get(), e_ISBN.get()):
         lbox_Results.insert(END, row)
 
 def add_command():
     lbox_Results.delete(0, END)
-    backend.insert(e_Title.get(), e_Author.get(), e_Year.get(), e_ISBN.get())
+    book_lib_backend.insert(e_Title.get(), e_Author.get(), e_Year.get(), e_ISBN.get())
     lbox_Results.insert(END, (e_Title.get(), e_Author.get(), e_Year.get(), e_ISBN.get()))
 
 def delete_command():
-    backend.delete(selected_tuple[0])
+    book_lib_backend.delete(selected_tuple[0])
     view_command()
 
 def update_commmand():
     lbox_Results.delete(0, END)
-    backend.update(
+    book_lib_backend.update(
         selected_tuple[0]
         , e_Title.get()
         , e_Author.get()
