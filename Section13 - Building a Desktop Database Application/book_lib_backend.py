@@ -64,9 +64,3 @@ def update(id, title, author, year, isbn):
     conn.commit()
     conn.close()
 
-connect()
-#insert("Test 1", "Book Worm", 1918, 1234567890)
-#print(view())
-#delete(2)
-#update(3, "Title 2", "Book Worm 2",1919,9876543210)
-#print(search(author="Book Worm 2"))
