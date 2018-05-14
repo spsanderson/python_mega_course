@@ -65,7 +65,7 @@ def update_commmand():
     view_command()
 
 def close_command():
-    print("Hi")
+    window.destroy()
 
 # Main window
 window = Tk()
