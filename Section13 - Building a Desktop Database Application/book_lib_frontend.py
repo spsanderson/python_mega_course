@@ -16,6 +16,8 @@ The user can perform the following:
 """
 
 from tkinter import *
+import book_lib_backend
+
 # Main window
 window = Tk()
 
