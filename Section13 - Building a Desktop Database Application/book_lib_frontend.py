@@ -70,7 +70,7 @@ def close_command():
 # Main window
 window = Tk()
 
-window.wm_title = "BookStore"
+window.wm_title("BookStore")
 
 # Labels / Entry Box's
 lbl_Title = Label(window, text = "Title:")
@@ -112,7 +112,7 @@ sb_Results.grid(row = 2, column = 2, rowspan = 6)
 # Configure scroll bar to list_box_results
 lbox_Results.configure(yscrollcommand = sb_Results.set)
 sb_Results.configure(command = lbox_Results.yview)
-
+# List Box binding
 lbox_Results.bind('<<ListboxSelect>>', get_selected_row)
 
 # Buttons #####################################################################
