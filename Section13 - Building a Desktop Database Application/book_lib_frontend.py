@@ -22,17 +22,20 @@ import book_lib_backend as backend
 # in order to pass it to the database
 def get_selected_row(event):
     global selected_tuple
-    index = lbox_Results.curselection()[0]
-    selected_tuple = lbox_Results.get(index)
-    e_Title.delete(0, END)
-    e_Title.insert(END, selected_tuple[1])
-    e_Author.delete(0, END)
-    e_Author.insert(END, selected_tuple[2])
-    e_Year.delete(0, END)
-    e_Year.insert(END, selected_tuple[3])
-    e_ISBN.delete(0, END)
-    e_ISBN.insert(END, selected_tuple[4])
-    return(selected_tuple)
+    try:
+        index = lbox_Results.curselection()[0]
+        selected_tuple = lbox_Results.get(index)
+        e_Title.delete(0, END)
+        e_Title.insert(END, selected_tuple[1])
+        e_Author.delete(0, END)
+        e_Author.insert(END, selected_tuple[2])
+        e_Year.delete(0, END)
+        e_Year.insert(END, selected_tuple[3])
+        e_ISBN.delete(0, END)
+        e_ISBN.insert(END, selected_tuple[4])
+        return(selected_tuple)
+    except:
+        pass
 
 def view_command():
     lbox_Results.delete(0,END)
