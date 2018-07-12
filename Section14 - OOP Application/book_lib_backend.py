@@ -10,8 +10,8 @@ import sqlite3
 class Database:
 
     # Create a db / connection to db
-    def __init__(self, *args, **kwargs):
-        conn = sqlite3.connect("books.db")
+    def __init__(self, db):
+        conn = sqlite3.connect(db)
         cur = conn.cursor()
         cur.execute(
             "CREATE TABLE IF NOT EXISTS book"
@@ -34,7 +34,7 @@ class Database:
         conn.commit()
         conn.close()
     # View data
-    def view():
+    def view(self):
         conn = sqlite3.connect("books.db")
         cur = conn.cursor()
         cur.execute("SELECT * FROM book")
@@ -65,5 +65,3 @@ class Database:
         cur.execute("UPDATE book SET title=?, author=?, year=?, isbn=? WHERE id=?",(title, author, year, isbn, id))
         conn.commit()
         conn.close()
-
-connect()

@@ -16,10 +16,10 @@ The user can perform the following:
 """
 
 from tkinter import *
-import book_lib_backend import Database
+from book_lib_backend import Database
 
 # Create database object
-database = Database()
+database = Database("books.db")
 
 # This function allows us to get the index of the selected row
 # in order to pass it to the database
