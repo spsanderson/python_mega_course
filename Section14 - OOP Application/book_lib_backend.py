@@ -27,7 +27,7 @@ class Database:
         conn.close()
 
     # Insert data into db
-    def insert(title, author, year, isbn):
+    def insert(self, title, author, year, isbn):
         conn = sqlite3.connect("books.db")
         cur = conn.cursor()
         cur.execute("INSERT INTO book VALUES (NULL, ?,?,?,?)", (title, author, year, isbn))
@@ -43,7 +43,7 @@ class Database:
         conn.close()
         return rows
     # Search data
-    def search(title="", author="", year="", isbn=""):
+    def search(self, title="", author="", year="", isbn=""):
         conn = sqlite3.connect("books.db")
         cur = conn.cursor()
         cur.execute("SELECT * FROM book WHERE title=? or author=? or year=? or isbn=?", (title, author, year, isbn))
@@ -52,14 +52,14 @@ class Database:
         conn.close()
         return rows
     # Delete record
-    def delete(id):
+    def delete(self, id):
         conn = sqlite3.connect("books.db")
         cur = conn.cursor()
         cur.execute("DELETE FROM book WHERE id=?", (id,))
         conn.commit()
         conn.close()
     # Update record
-    def update(id, title, author, year, isbn):
+    def update(self, id, title, author, year, isbn):
         conn = sqlite3.connect("books.db")
         cur = conn.cursor()
         cur.execute("UPDATE book SET title=?, author=?, year=?, isbn=? WHERE id=?",(title, author, year, isbn, id))
